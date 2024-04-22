@@ -17,7 +17,9 @@ public class PairListGUI extends JFrame {
         pairList = new ArrayList<>();
 
         firstField = new JTextField();
+        firstField.setFont(new Font("Arial", Font.PLAIN, 18)); // Cambia el tamaño de la fuente de firstField
         secondField = new JTextField();
+        secondField.setFont(new Font("Arial", Font.PLAIN, 18));
         addButton = new JButton("Add");
         modifyButton = new JButton("Modify");
         removeButton = new JButton("Remove");
