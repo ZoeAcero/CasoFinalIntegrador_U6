@@ -25,4 +25,3 @@ public class Pair {
         this.second = second;
     }
 }
-
