@@ -66,12 +66,17 @@ public class PairListGUI extends JFrame {
 
         pairTable = new JTable(); // Aquí necesitarás un modelo de tabla personalizado para mostrar los objetos Pair
 
+        JPanel buttonPanel = new JPanel();
+        buttonPanel.setLayout(new FlowLayout());
+
+        buttonPanel.add(firstField);
+        buttonPanel.add(secondField);
+        buttonPanel.add(addButton);
+        buttonPanel.add(modifyButton);
+        buttonPanel.add(removeButton);
+
         setLayout(new BorderLayout());
-        add(firstField, BorderLayout.NORTH);
-        add(secondField, BorderLayout.NORTH);
-        add(addButton, BorderLayout.NORTH);
-        add(modifyButton, BorderLayout.NORTH);
-        add(removeButton, BorderLayout.NORTH);
+        add(buttonPanel, BorderLayout.NORTH);
         add(new JScrollPane(pairTable), BorderLayout.CENTER);
 
         setSize(400, 300);
