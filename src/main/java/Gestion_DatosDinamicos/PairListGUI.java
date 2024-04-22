@@ -13,6 +13,10 @@ public class PairListGUI extends JFrame {
     private JButton addButton, modifyButton, removeButton;
     private JTable pairTable;
 
+    public List<Pair> getPairList() {
+        return pairList;
+    }
+
     public PairListGUI() {
         pairList = new ArrayList<>();
 

@@ -14,28 +14,28 @@ public class OrdenacionBusqueda {
     }
 
     // Método para ordenar los registros por el primer elemento de la pareja
-    public void ordenarPorElemento1() {
-        Collections.sort(listaDatos.obtenerLista(), Comparator.comparing(Pair::getFirst));
+    public void ordenarPorFirst() {
+        Collections.sort(listaDatos.getPairList(), Comparator.comparing(Pair::getFirst));
     }
 
     // Método para ordenar los registros por el segundo elemento de la pareja
-    public void ordenarPorElemento2() {
-        Collections.sort(listaDatos.obtenerLista(), Comparator.comparing(Pair::getSecond));
+    public void ordenarPorSecond() {
+        Collections.sort(listaDatos.getPairList(), Comparator.comparing(Pair::getSecond));
     }
 
     // Método para buscar una pareja por el primer elemento
-    public Pair buscarPorElemento1(int elemento1) {
-        for (Pair pareja : listaDatos.obtenerLista()) {
-            if (pareja.getFirst() == elemento1) {
+    public Pair buscarPorFirst(int First) {
+        for (Pair pareja : listaDatos.getPairList()) {
+            if (pareja.getFirst() == First) {
                 return pareja;
             }
         }
         return null;
     }
     // Método para buscar una pareja por el segundo elemento
-    public Pair buscarPorElemento2(int elemento2) {
-        for (Pair pareja : listaDatos.obtenerLista()) {
-            if (pareja.getSecond() == elemento2) {
+    public Pair buscarPorSecond(int Second) {
+        for (Pair pareja : listaDatos.getPairList()) {
+            if (pareja.getSecond() == Second) {
                 return pareja;
             }
         }
