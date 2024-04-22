@@ -6,16 +6,16 @@ import java.util.Collections;
 import java.util.Comparator;
 
 public class OrdenacionBusqueda {
-    private ListaDatos listaDatos;
+    private PairListGUI listaDatos;
 
     // Constructor
-    public OrdenacionBusqueda(ListaDatos listaDatos) {
+    public OrdenacionBusqueda(PairListGUI listaDatos) {
         this.listaDatos = listaDatos;
     }
 
     // Método para ordenar los registros por el primer elemento de la pareja
     public void ordenarPorElemento1() {
-        Collections.sort(listaDatos.obtenerLista(), Comparator.comparing(Pair::getElemento1));
+        Collections.sort(listaDatos.obtenerpairList(), Comparator.comparing(Pair::getElemento1));
     }
 
     // Método para ordenar los registros por el segundo elemento de la pareja
@@ -26,7 +26,7 @@ public class OrdenacionBusqueda {
     // Método para buscar una pareja por el primer elemento
     public Pair buscarPorElemento1(int elemento1) {
         for (Pair pareja : listaDatos.obtenerLista()) {
-            if (pareja.getElemento1() == elemento1) {
+            if (pareja.getFirst() == elemento1) {
                 return pareja;
             }
         }
@@ -35,7 +35,7 @@ public class OrdenacionBusqueda {
     // Método para buscar una pareja por el segundo elemento
     public Pair buscarPorElemento2(int elemento2) {
         for (Pair pareja : listaDatos.obtenerLista()) {
-            if (pareja.getElemento2() == elemento2) {
+            if (pareja.getSecond() == elemento2) {
                 return pareja;
             }
         }
