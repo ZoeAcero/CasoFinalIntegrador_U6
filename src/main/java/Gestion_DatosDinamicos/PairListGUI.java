@@ -34,4 +34,20 @@ public class PairListGUI extends JFrame{
                 }
             }
         });
+
+        setLayout(new BorderLayout());
+        add(firstField, BorderLayout.NORTH);
+        add(secondField, BorderLayout.NORTH);
+        add(addButton, BorderLayout.NORTH);
+        add(modifyButton, BorderLayout.NORTH);
+        add(removeButton, BorderLayout.NORTH);
+        add(new JScrollPane(pairTable), BorderLayout.CENTER);
+
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    private void updateTable() {
+
+    }
 }
