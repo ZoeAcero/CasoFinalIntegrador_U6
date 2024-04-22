@@ -9,4 +9,8 @@ public class AnalisisRegistros {
     public AnalisisRegistros(PairListGUI listaDatos) {
         this.listaDatos = listaDatos;
     }
+
+    public void ordenarRegistros() {
+        System.out.println("Este método ordenará los registros");
+    }
 }
