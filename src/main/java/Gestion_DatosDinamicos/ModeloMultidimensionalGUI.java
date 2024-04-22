@@ -25,7 +25,7 @@ public class ModeloMultidimensionalGUI extends JFrame {
 
         add(panelDatos, BorderLayout.CENTER);
     }
-    
+
     public void establecerDato(int fila, int columna, int valor) {
         if (fila >= 0 && fila < camposTexto.length && columna >= 0 && columna < camposTexto[0].length) {
             camposTexto[fila][columna].setText(String.valueOf(valor));
@@ -34,4 +34,23 @@ public class ModeloMultidimensionalGUI extends JFrame {
         }
     }
 
+    public int obtenerDato(int fila, int columna) {
+        if (fila >= 0 && fila < camposTexto.length && columna >= 0 && columna < camposTexto[0].length) {
+            try {
+                return Integer.parseInt(camposTexto[fila][columna].getText());
+            } catch (NumberFormatException e) {
+                JOptionPane.showMessageDialog(this, "Error: Valor no válido en la celda [" + fila + "][" + columna + "]", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }
+        return 0; // Default value if there's an error
     }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            ModeloMultidimensionalGUI ventana = new ModeloMultidimensionalGUI(3, 3);
+            ventana.setVisible(true);
+        });
+    }
+}
+
+    
