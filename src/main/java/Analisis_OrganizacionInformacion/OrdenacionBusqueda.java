@@ -15,12 +15,12 @@ public class OrdenacionBusqueda {
 
     // Método para ordenar los registros por el primer elemento de la pareja
     public void ordenarPorElemento1() {
-        Collections.sort(listaDatos.obtenerpairList(), Comparator.comparing(Pair::getElemento1));
+        Collections.sort(listaDatos.obtenerLista(), Comparator.comparing(Pair::getFirst));
     }
 
     // Método para ordenar los registros por el segundo elemento de la pareja
     public void ordenarPorElemento2() {
-        Collections.sort(listaDatos.obtenerPairListGUI(), Comparator.comparing(Pair::getElemento2));
+        Collections.sort(listaDatos.obtenerLista(), Comparator.comparing(Pair::getSecond));
     }
 
     // Método para buscar una pareja por el primer elemento
