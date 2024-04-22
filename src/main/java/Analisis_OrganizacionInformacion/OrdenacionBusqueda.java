@@ -33,3 +33,13 @@ public class OrdenacionBusqueda {
         }
         return null;
     }
+    // Método para buscar una pareja por el segundo elemento
+    public Pareja buscarPorElemento2(int elemento2) {
+        for (Pareja pareja : listaDatos.obtenerLista()) {
+            if (pareja.getElemento2() == elemento2) {
+                return pareja;
+            }
+        }
+        return null;
+    }
+}
