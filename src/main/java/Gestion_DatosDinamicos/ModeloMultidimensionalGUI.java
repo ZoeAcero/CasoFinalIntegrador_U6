@@ -1,11 +1,17 @@
 package Gestion_DatosDinamicos;
 
-import java.awt.*;
 import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ModeloMultidimensionalGUI extends JFrame {
     private final JTextField[][] camposTexto;
     private final JPanel panelDatos;
+    private final PairList pairList;
+    private final RealList realList;
+    private final JTextField pairInput1, pairInput2, realInput;
+    private final JButton addPairButton, addRealButton;
 
     public ModeloMultidimensionalGUI(int filas, int columnas) {
         setTitle("Modelo Multidimensional");
@@ -14,7 +20,39 @@ public class ModeloMultidimensionalGUI extends JFrame {
 
         panelDatos = new JPanel(new GridLayout(filas, columnas, 5, 5));
         camposTexto = new JTextField[filas][columnas];
+        pairList = new PairList();
+        realList = new RealList();
 
+        pairInput1 = new JTextField();
+        pairInput2 = new JTextField();
+        realInput = new JTextField();
+
+        addPairButton = new JButton("Add Pair");
+        addPairButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int first = Integer.parseInt(pairInput1.getText());
+                    int second = Integer.parseInt(pairInput2.getText());
+                    pairList.addPair(new Pair(first, second));
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Invalid input. Please enter two integers.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
+        addRealButton = new JButton("Add Real");
+        addRealButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    double real = Double.parseDouble(realInput.getText());
+                    realList.addReal(real);
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Invalid input. Please enter a real number.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
 
         for (int i = 0; i < filas; i++) {
             for (int j = 0; j < columnas; j++) {
@@ -24,6 +62,11 @@ public class ModeloMultidimensionalGUI extends JFrame {
         }
 
         add(panelDatos, BorderLayout.CENTER);
+        add(pairInput1, BorderLayout.NORTH);
+        add(pairInput2, BorderLayout.NORTH);
+        add(realInput, BorderLayout.NORTH);
+        add(addPairButton, BorderLayout.NORTH);
+        add(addRealButton, BorderLayout.NORTH);
     }
 
     public void establecerDato(int fila, int columna, int valor) {
@@ -42,7 +85,7 @@ public class ModeloMultidimensionalGUI extends JFrame {
                 JOptionPane.showMessageDialog(this, "Error: Valor no válido en la celda [" + fila + "][" + columna + "]", "Error", JOptionPane.ERROR_MESSAGE);
             }
         }
-        return 0; // Default value if there's an error
+        return 0; 
     }
 
     public static void main(String[] args) {
