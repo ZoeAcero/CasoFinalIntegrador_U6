@@ -53,4 +53,4 @@ public class ModeloMultidimensionalGUI extends JFrame {
     }
 }
 
-    
+
