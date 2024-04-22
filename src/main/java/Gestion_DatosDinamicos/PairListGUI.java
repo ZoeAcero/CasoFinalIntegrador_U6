@@ -11,5 +11,27 @@ public class PairListGUI extends JFrame{
     private JButton addButton, modifyButton, removeButton;
     private JTable pairTable;
 
-    
+    public PairListGUI() {
+        pairList = new PairList();
+
+        firstField = new JTextField();
+        secondField = new JTextField();
+        addButton = new JButton("Add");
+        modifyButton = new JButton("Modify");
+        removeButton = new JButton("Remove");
+        pairTable = new JTable(); // This will need a custom table model
+
+        addButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    int first = Integer.parseInt(firstField.getText());
+                    int second = Integer.parseInt(secondField.getText());
+                    pairList.addPair(new Pair(first, second));
+                    updateTable();
+                } catch (NumberFormatException ex) {
+                    JOptionPane.showMessageDialog(null, "Invalid input. Please enter two integers.", "Error", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
 }
