@@ -13,4 +13,8 @@ public class AnalisisRegistros {
     public void ordenarRegistros() {
         System.out.println("Este método ordenará los registros");
     }
+
+    public void filtrarRegistros() {
+        System.out.println("Este método filtrará los registros");
+    }
 }
