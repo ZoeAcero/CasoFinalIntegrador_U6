@@ -25,4 +25,8 @@ public class PairList {
     public void setPair(int index, Pair pair) {
         pairs.set(index, pair);
     }
+
+    public int size() {
+        return 0;
+    }
 }

@@ -50,4 +50,9 @@ public class PairListGUI extends JFrame{
     private void updateTable() {
 
     }
+    //main
+    public static void main(String[] args) {
+        PairListGUI pairListGUI = new PairListGUI();
+        pairListGUI.setVisible(true);
+    }
 }
