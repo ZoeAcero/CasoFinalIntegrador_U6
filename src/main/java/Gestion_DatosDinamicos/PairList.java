@@ -14,7 +14,15 @@ public class PairList {
         pairs.add(pair);
     }
 
+    public void removePair(int index) {
+        pairs.remove(index);
+    }
+
     public Pair getPair(int index) {
         return pairs.get(index);
+    }
+
+    public void setPair(int index, Pair pair) {
+        pairs.set(index, pair);
     }
 }
