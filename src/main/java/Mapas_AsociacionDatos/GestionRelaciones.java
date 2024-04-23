@@ -20,6 +20,8 @@ public class GestionRelaciones {
         return this.relaciones.get(pareja);
     }
 
-    
+    public void eliminarRelacion(Pair pareja) {
+        this.relaciones.remove(pareja);
+    }
 
 }
