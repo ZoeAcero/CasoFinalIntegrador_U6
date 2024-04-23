@@ -25,4 +25,18 @@ public class OrdenacionListado {
         frame = new JFrame("Ordenacion de Listado");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new FlowLayout());
+
+
+        JButton sortNameButton = new JButton("Ordenar por Nombre");
+        JButton sortSizeButton = new JButton("Ordenar por Tamaño");
+        textArea = new JTextArea(20, 30);
+        textArea.setEditable(false);
+
+        sortNameButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ordenarPorNombre();
+                textArea.append("Archivos ordenados por nombre.\n");
+            }
+        });
 }
