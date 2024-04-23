@@ -62,4 +62,10 @@ public class GestionRelaciones {
     public void eliminarRelacion(Pair pareja) {
         this.relaciones.remove(pareja);
     }
+
+    // Main
+
+    public static void main(String[] args) {
+        GestionRelaciones gestionRelaciones = new GestionRelaciones();
+    }
 }

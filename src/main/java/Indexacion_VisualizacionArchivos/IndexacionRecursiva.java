@@ -69,5 +69,11 @@ public class IndexacionRecursiva {
     public List<File> obtenerArchivosIndexados() {
         return this.archivosIndexados;
     }
+
+    // Método main
+
+    public static void main(String[] args) {
+        IndexacionRecursiva indexacionRecursiva = new IndexacionRecursiva();
+    }
 }
 

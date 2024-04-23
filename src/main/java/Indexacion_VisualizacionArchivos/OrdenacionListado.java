@@ -70,4 +70,12 @@ public class OrdenacionListado {
     public List<File> obtenerArchivosIndexados() {
         return this.archivosIndexados;
     }
+
+    // main
+
+    public static void main(String[] args) {
+        IndexacionRecursiva indexacionRecursiva = new IndexacionRecursiva();
+        OrdenacionListado ordenacionListado = new OrdenacionListado(indexacionRecursiva.obtenerArchivosIndexados());
+        ordenacionListado.frame.setVisible(true);
+    }
 }
