@@ -42,7 +42,7 @@ public class Decoracion extends JPanel {
 
         // Draw centered text
         String text = "UAX";
-        Font font = new Font("Arial", Font.BOLD, 100);
+        Font font = new Font("Arial", Font.BOLD, 200);
         g2d.setFont(font);
         FontMetrics metrics = g.getFontMetrics(font);
         int x = (width - metrics.stringWidth(text)) / 2;
