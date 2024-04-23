@@ -55,4 +55,19 @@ public class OrdenacionListado {
         frame.pack();
         frame.setVisible(true);
     }
+
+    // Método para ordenar los archivos por nombre
+    public void ordenarPorNombre() {
+        Collections.sort(archivosIndexados, Comparator.comparing(File::getName));
+    }
+
+    // Método para ordenar los archivos por tamaño
+    public void ordenarPorTamano() {
+        Collections.sort(archivosIndexados, Comparator.comparing(File::length));
+    }
+
+    // Método para obtener la lista de archivos indexados
+    public List<File> obtenerArchivosIndexados() {
+        return this.archivosIndexados;
+    }
 }
