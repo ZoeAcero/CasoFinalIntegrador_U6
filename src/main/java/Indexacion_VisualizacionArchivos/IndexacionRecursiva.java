@@ -59,4 +59,15 @@ public class IndexacionRecursiva {
             for (File archivo : directorio.listFiles()) {
                 indexarArchivos(archivo);
             }
+        } else {
+            // Si el archivo no es un directorio, lo añadimos a la lista de archivos indexados
+            archivosIndexados.add(directorio);
+        }
+    }
+
+    // Método para obtener la lista de archivos indexados
+    public List<File> obtenerArchivosIndexados() {
+        return this.archivosIndexados;
+    }
+}
 }
