@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Decoracion extends JPanel {
-    
+
 
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -42,12 +42,22 @@ public class Decoracion extends JPanel {
 
         // Draw centered text
         String text = "UAX";
-        Font font = new Font("Arial", Font.BOLD, 50);
+        Font font = new Font("Arial", Font.BOLD, 100);
         g2d.setFont(font);
         FontMetrics metrics = g.getFontMetrics(font);
         int x = (width - metrics.stringWidth(text)) / 2;
         int y = ((height - metrics.getHeight()) / 2) + metrics.getAscent();
         g2d.setColor(Color.BLACK);
         g2d.drawString(text, x, y);
+    }
+
+    //main method
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Decoracion");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(800, 600);
+        frame.add(new Decoracion());
+        frame.setVisible(true);
     }
 }
