@@ -12,4 +12,14 @@ public class GestionRelaciones {
         this.relaciones = new HashMap<>();
     }
 
+    public void agregarRelacion(Pair pareja1, Pair pareja2) {
+        this.relaciones.put(pareja1, pareja2);
+    }
+
+    public Pair obtenerRelacion(Pair pareja) {
+        return this.relaciones.get(pareja);
+    }
+
+    
+
 }
