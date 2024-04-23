@@ -44,4 +44,19 @@ public class IndexacionRecursiva {
                 }
             }
         });
+
+        frame.add(indexButton);
+        frame.add(new JScrollPane(textArea));
+
+        frame.pack();
+        frame.setVisible(true);
+    }
+
+    // Método para indexar archivos de manera recursiva
+    public void indexarArchivos(File directorio) {
+        // Si el archivo es un directorio, indexamos recursivamente
+        if (directorio.isDirectory()) {
+            for (File archivo : directorio.listFiles()) {
+                indexarArchivos(archivo);
+            }
 }
