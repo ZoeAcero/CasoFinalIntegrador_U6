@@ -39,4 +39,20 @@ public class OrdenacionListado {
                 textArea.append("Archivos ordenados por nombre.\n");
             }
         });
+
+        sortSizeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ordenarPorTamano();
+                textArea.append("Archivos ordenados por tamaño.\n");
+            }
+        });
+
+        frame.add(sortNameButton);
+        frame.add(sortSizeButton);
+        frame.add(new JScrollPane(textArea));
+
+        frame.pack();
+        frame.setVisible(true);
+    }
 }
