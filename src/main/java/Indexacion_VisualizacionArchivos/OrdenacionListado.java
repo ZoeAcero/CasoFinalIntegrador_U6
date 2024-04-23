@@ -13,4 +13,16 @@ public class OrdenacionListado {
     private List<File> archivosIndexados;
     private JFrame frame;
     private JTextArea textArea;
+
+
+    // Constructor
+    public OrdenacionListado(List<File> archivosIndexados) {
+        this.archivosIndexados = archivosIndexados;
+        createAndShowGUI();
+    }
+
+    private void createAndShowGUI() {
+        frame = new JFrame("Ordenacion de Listado");
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setLayout(new FlowLayout());
 }
