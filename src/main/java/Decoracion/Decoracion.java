@@ -4,21 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Decoracion extends JPanel {
-    private Image imagen1;
-    private Image imagen2;
+    
 
-
-    public Decoracion() {
-        // Cargar la imagen
-        ImageIcon icono1 = new ImageIcon("src/main/resources/image-remove-preview (3).png");
-        imagen1 = icono1.getImage();
-        ImageIcon icono2 = new ImageIcon("src/main/resources/logoUAX-remove-preview.png");
-        // Escalar la imagen
-        int newWidth = icono2.getIconWidth() / 3; // Ajusta estos valores a tu gusto
-        int newHeight = icono2.getIconHeight() / 3; // Ajusta estos valores a tu gusto
-        imagen2 = icono2.getImage().getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
-
-    }
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
         Graphics2D g2d = (Graphics2D) g;
@@ -42,25 +29,25 @@ public class Decoracion extends JPanel {
         int nPoints = 4; // Número de puntos del polígono
         g2d.fillPolygon(xPoints, yPoints, nPoints); // Dibujar y rellenar el polígono
 
-
         g2d.setColor(colorlínea);
         g2d.drawLine(width / 3 + d, 0, d, height);
-
 
         int d2 = width / 2;
         g2d.drawLine(width / 3 + d + d2, 0, d + d2, height);
         g2d.drawLine(width / 3 + d + 2 * d2, 0, d + 2 * d2, height);
 
-
         int[] xPoints2 = {width / 3 + d + d2, width / 3 + d + 2 * d2, d + 2 * d2, d + d2};
         int[] yPoints2 = {0, 0, height, height};
         g2d.fillPolygon(xPoints2, yPoints2, nPoints);
 
-
-
-        int x2 = 0;
-        int y2 = 200;
-        g2d.drawImage(imagen2, x2, y2, null);
-
+        // Draw centered text
+        String text = "UAX";
+        Font font = new Font("Arial", Font.BOLD, 50);
+        g2d.setFont(font);
+        FontMetrics metrics = g.getFontMetrics(font);
+        int x = (width - metrics.stringWidth(text)) / 2;
+        int y = ((height - metrics.getHeight()) / 2) + metrics.getAscent();
+        g2d.setColor(Color.BLACK);
+        g2d.drawString(text, x, y);
     }
 }
