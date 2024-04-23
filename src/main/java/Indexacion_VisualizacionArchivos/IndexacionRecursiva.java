@@ -27,4 +27,21 @@ public class IndexacionRecursiva {
         JButton indexButton = new JButton("Indexar Archivos");
         textArea = new JTextArea(20, 30);
         textArea.setEditable(false);
+
+        indexButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                JFileChooser fileChooser = new JFileChooser();
+                fileChooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+                int returnValue = fileChooser.showOpenDialog(null);
+                if (returnValue == JFileChooser.APPROVE_OPTION) {
+                    File selectedDirectory = fileChooser.getSelectedFile();
+                    indexarArchivos(selectedDirectory);
+                    textArea.append("Archivos indexados:\n");
+                    for (File file : obtenerArchivosIndexados()) {
+                        textArea.append(file.getPath() + "\n");
+                    }
+                }
+            }
+        });
 }
