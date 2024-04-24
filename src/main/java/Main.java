@@ -57,6 +57,7 @@ public class Main extends JFrame{
         mapasAsociacionButton.addActionListener(e -> new GestionRelaciones());
         buttonPanel.add(mapasAsociacionButton, gbc);
 
+
         JButton indexadorVisualizacionButton = new JButton("Indexador y Visualización de Archivos \uD83D\uDC41\uFE0F\u200B\uD83D\uDDC3\uFE0F\u200B");
         indexadorVisualizacionButton.setOpaque(false);
         indexadorVisualizacionButton.addActionListener(e -> new IndexacionRecursiva());
