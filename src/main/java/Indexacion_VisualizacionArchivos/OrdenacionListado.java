@@ -16,7 +16,7 @@ public class OrdenacionListado extends JFrame {
 
 
     // Constructor
-    public OrdenacionListado(List<File> archivosIndexados) {
+    public OrdenacionListado() {
         setTitle("Indexacion y Visualizacion de Archivos");
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -80,7 +80,7 @@ public class OrdenacionListado extends JFrame {
 
     public static void main(String[] args) {
         IndexacionRecursiva indexacionRecursiva = new IndexacionRecursiva();
-        OrdenacionListado ordenacionListado = new OrdenacionListado(indexacionRecursiva.obtenerArchivosIndexados());
+        OrdenacionListado ordenacionListado = new OrdenacionListado();
         ordenacionListado.frame.setVisible(true);
     }
 }

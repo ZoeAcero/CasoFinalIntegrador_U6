@@ -81,6 +81,7 @@ public class IndexacionRecursiva {
     }
 
     public Map<Object, Object> getIndex() {
+        return null;
     }
 }
 

@@ -77,5 +77,6 @@ public class RecuperacionEficiente extends JFrame{
     }
 
     public List<String> listar() {
+        return null;
     }
 }
