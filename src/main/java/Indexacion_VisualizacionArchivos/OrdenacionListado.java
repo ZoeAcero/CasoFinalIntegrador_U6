@@ -9,7 +9,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class OrdenacionListado {
+public class OrdenacionListado extends JFrame {
     private List<File> archivosIndexados;
     private JFrame frame;
     private JTextArea textArea;
@@ -17,6 +17,11 @@ public class OrdenacionListado {
 
     // Constructor
     public OrdenacionListado(List<File> archivosIndexados) {
+        setTitle("Indexacion y Visualizacion de Archivos");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+
         this.archivosIndexados = archivosIndexados;
         createAndShowGUI();
     }
