@@ -49,6 +49,25 @@ public class Main extends JFrame{
             frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             frame.setLayout(new FlowLayout());
 
+            JButton PairListGUIButton = new JButton("Análisis de Registros");
+            PairListGUIButton.addActionListener(e1 -> new PairListGUI());
+            frame.add(PairListGUIButton);
+
+            JButton ordenacionBusquedaButton = new JButton("Ordenación y Búsqueda");
+            ordenacionBusquedaButton.addActionListener(e1 -> new OrdenacionBusqueda());
+            frame.add(ordenacionBusquedaButton);
+
+            frame.pack();
+            frame.setVisible(true);
+        });
+
+        JButton analisisOrganizacionButton = new JButton("Análisis y Organización de Información");
+
+        GestionDatosDinamicosButton.addActionListener(e -> {
+            JFrame frame = new JFrame("Analisis y Organización de Información");
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setLayout(new FlowLayout());
+
             JButton analisisRegistrosButton = new JButton("Análisis de Registros");
             analisisRegistrosButton.addActionListener(e1 -> new AnalisisRegistros());
             frame.add(analisisRegistrosButton);
@@ -60,14 +79,6 @@ public class Main extends JFrame{
             frame.pack();
             frame.setVisible(true);
         });
-
-        JButton analisisOrganizacionButton = new JButton("Análisis y Organización de Información");
-        analisisOrganizacionButton.setOpaque(false);
-        analisisOrganizacionButton.addActionListener(e -> {
-            new AnalisisRegistros();
-            new OrdenacionBusqueda();
-        });
-        buttonPanel.add(analisisOrganizacionButton, gbc);
 
         JButton mapasAsociacionButton = new JButton("Mapas y Asociación de Datos");
         mapasAsociacionButton.setOpaque(false);
