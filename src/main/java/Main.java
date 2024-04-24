@@ -101,10 +101,21 @@ public class Main extends JFrame{
 
         JButton indexadorVisualizacionButton = new JButton("Indexador y Visualización de Archivos");
 
-        indexadorVisualizacionButton.setOpaque(false);
         indexadorVisualizacionButton.addActionListener(e -> {
-            new IndexacionRecursiva();
-            new OrdenacionListado();
+            JFrame frame = new JFrame("Indexador y Visualización de Archivos");
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setLayout(new FlowLayout());
+
+            JButton IndexacionRecursivaButton = new JButton("Gestión de Relaciones");
+            IndexacionRecursivaButton.addActionListener(e1 -> new AnalisisRegistros());
+            frame.add(IndexacionRecursivaButton);
+
+            JButton OrdenacionListadoButton = new JButton("Ordenación y Búsqueda");
+            OrdenacionListadoButton.addActionListener(e1 -> new OrdenacionBusqueda());
+            frame.add(OrdenacionListadoButton);
+
+            frame.pack();
+            frame.setVisible(true);
         });
         buttonPanel.add(indexadorVisualizacionButton, gbc);
 
