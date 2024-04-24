@@ -1,7 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import Decoracion.*;
 import Analisis_OrganizacionInformacion.*;
 import Gestion_DatosDinamicos.*;
@@ -74,7 +72,7 @@ public class Main extends JFrame{
         JPanel iconPanel = new JPanel();
         iconPanel.setLayout(new BoxLayout(iconPanel, BoxLayout.Y_AXIS));
         iconPanel.setOpaque(false);
-        
+
 
         JButton homeButton = new JButton(new ImageIcon(new ImageIcon("src/main/resources/image-icono-home.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
         homeButton.setBorderPainted(false);
