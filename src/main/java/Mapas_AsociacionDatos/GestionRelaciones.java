@@ -19,7 +19,7 @@ public class GestionRelaciones extends JFrame{
     public GestionRelaciones() {
         setTitle("Mapas y Asociación de Datos");
         setSize(300, 200);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
         this.relaciones = new HashMap<>();
         createAndShowGUI();
@@ -27,7 +27,7 @@ public class GestionRelaciones extends JFrame{
 
     private void createAndShowGUI() {
         frame = new JFrame("Gestion de Relaciones");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLayout(new FlowLayout());
 
         input1 = new JTextField(10);
