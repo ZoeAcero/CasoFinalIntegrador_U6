@@ -19,7 +19,7 @@ public class OrdenacionBusqueda extends JFrame{
     public OrdenacionBusqueda() {
         setTitle("Análisis y Organización de Información");
         setSize(300, 200);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
         this.listaDatos = listaDatos;
         createAndShowGUI();
@@ -27,7 +27,7 @@ public class OrdenacionBusqueda extends JFrame{
 
     private void createAndShowGUI() {
         frame = new JFrame("Ordenacion y Busqueda");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLayout(new FlowLayout());
 
         input = new JTextField(10);
