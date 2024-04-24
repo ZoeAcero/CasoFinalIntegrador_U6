@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import Gestion_DatosDinamicos.*;
 
-public class GestionRelaciones {
+public class GestionRelaciones extends JFrame{
     private Map<Pair, Pair> relaciones;
     private JFrame frame;
     private JTextField input1;
@@ -17,6 +17,10 @@ public class GestionRelaciones {
 
     // Constructor
     public GestionRelaciones() {
+        setTitle("Mapas y Asociación de Datos");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
         this.relaciones = new HashMap<>();
         createAndShowGUI();
     }
