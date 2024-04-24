@@ -44,17 +44,17 @@ public class Main extends JFrame{
         gbc.insets = new Insets(10, 0, 10, 0);
         gbc.ipady = 0;
 
-        JButton gestionDatosDinamicosButton = new JButton("Gestión de Datos Dinámicos \uD83D\uDCC8\u200B\uD83D\uDCC9\u200B");
+        JButton gestionDatosDinamicosButton = new JButton("Gestión de Datos Dinámicos");
         gestionDatosDinamicosButton.setOpaque(false);
         gestionDatosDinamicosButton.addActionListener(e -> new PairListGUI());
         buttonPanel.add(gestionDatosDinamicosButton, gbc);
 
-        JButton analisisOrganizacionButton = new JButton("Análisis y Organización de Información \uD83D\uDDC4\uFE0F\u200Bℹ\uFE0F\u200B");
+        JButton analisisOrganizacionButton = new JButton("Análisis y Organización de Información");
         analisisOrganizacionButton.setOpaque(false);
         analisisOrganizacionButton.addActionListener(e -> new AnalisisRegistros());
         buttonPanel.add(analisisOrganizacionButton, gbc);
 
-        JButton mapasAsociacionButton = new JButton("Mapas y Asociación de Datos \uD83D\uDDFA\uFE0F\u200B\uD83D\uDCCA\u200B");
+        JButton mapasAsociacionButton = new JButton("Mapas y Asociación de Datos");
         mapasAsociacionButton.setOpaque(false);
         mapasAsociacionButton.addActionListener(e -> new GestionRelaciones());
         buttonPanel.add(mapasAsociacionButton, gbc);
@@ -63,5 +63,32 @@ public class Main extends JFrame{
         indexadorVisualizacionButton.setOpaque(false);
         indexadorVisualizacionButton.addActionListener(e -> new IndexacionRecursiva());
         buttonPanel.add(indexadorVisualizacionButton, gbc);
+
+        JPanel centerPanel = new JPanel();
+        centerPanel.setLayout(new BoxLayout(centerPanel, BoxLayout.Y_AXIS));
+        centerPanel.setOpaque(false);
+        centerPanel.add(titlePanel);
+        centerPanel.add(buttonPanel);
+        decoPanel.add(centerPanel, BorderLayout.CENTER);
+
+        JPanel iconPanel = new JPanel();
+        iconPanel.setLayout(new BoxLayout(iconPanel, BoxLayout.Y_AXIS));
+        iconPanel.setOpaque(false);
+
+        JButton menuButton = new JButton(new ImageIcon(new ImageIcon("src/main/resources/image-icono-menu.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
+        menuButton.setBorderPainted(false);
+        menuButton.setContentAreaFilled(false);
+        menuButton.setFocusPainted(false);
+        menuButton.setOpaque(false);
+        menuButton.addActionListener(e -> new DescriptionWindow());
+        iconPanel.add(menuButton);
+
+        JButton homeButton = new JButton(new ImageIcon(new ImageIcon("src/main/resources/image-icono-home.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
+        homeButton.setBorderPainted(false);
+        homeButton.setContentAreaFilled(false);
+        homeButton.setFocusPainted(false);
+        homeButton.setOpaque(false);
+        homeButton.addActionListener(e -> JOptionPane.showMessageDialog(null, "Ya estás en casa"));
+        iconPanel.add(homeButton);
 
     }
