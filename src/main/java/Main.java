@@ -49,7 +49,10 @@ public class Main extends JFrame{
 
         JButton analisisOrganizacionButton = new JButton("Análisis y Organización de Información");
         analisisOrganizacionButton.setOpaque(false);
-        analisisOrganizacionButton.addActionListener(e -> new AnalisisRegistros());
+        analisisOrganizacionButton.addActionListener(e -> {
+            new AnalisisRegistros();
+            new OrdenacionBusqueda();
+        });
         buttonPanel.add(analisisOrganizacionButton, gbc);
 
         JButton mapasAsociacionButton = new JButton("Mapas y Asociación de Datos");
