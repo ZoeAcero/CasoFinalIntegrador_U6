@@ -7,7 +7,7 @@ import java.awt.event.ActionListener;
 import java.util.Map;
 import Gestion_DatosDinamicos.*;
 
-public class RecuperacionEficiente {
+public class RecuperacionEficiente extends JFrame{
     private Map<Pair, Pair> relaciones;
     private JFrame frame;
     private JTextField input1;
@@ -16,6 +16,10 @@ public class RecuperacionEficiente {
 
     // Constructor
     public RecuperacionEficiente(Map<Pair, Pair> relaciones) {
+        setTitle("Mapas y Asociación de Datos");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
         this.relaciones = relaciones;
         createAndShowGUI();
     }
