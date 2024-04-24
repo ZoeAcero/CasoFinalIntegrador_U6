@@ -60,7 +60,10 @@ public class Main extends JFrame{
 
         JButton indexadorVisualizacionButton = new JButton("Indexador y Visualización de Archivos \uD83D\uDC41\uFE0F\u200B\uD83D\uDDC3\uFE0F\u200B");
         indexadorVisualizacionButton.setOpaque(false);
-        indexadorVisualizacionButton.addActionListener(e -> new MainIndexacion());
+        indexadorVisualizacionButton.addActionListener(e -> {
+            new AnalisisRegistros();
+            new OrdenacionBusqueda();
+        });
         buttonPanel.add(indexadorVisualizacionButton, gbc);
 
         JPanel centerPanel = new JPanel();

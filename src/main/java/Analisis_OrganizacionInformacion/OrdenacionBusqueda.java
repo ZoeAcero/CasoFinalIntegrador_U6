@@ -16,7 +16,7 @@ public class OrdenacionBusqueda extends JFrame{
     private JTextArea textArea;
 
     // Constructor
-    public OrdenacionBusqueda(PairListGUI listaDatos) {
+    public OrdenacionBusqueda() {
         setTitle("Análisis y Organización de Información");
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
