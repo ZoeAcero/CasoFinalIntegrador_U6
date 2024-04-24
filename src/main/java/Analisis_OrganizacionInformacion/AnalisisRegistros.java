@@ -17,7 +17,7 @@ public class AnalisisRegistros extends JFrame {
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setVisible(true);
-        
+
         this.listaDatos = listaDatos;
         createAndShowGUI();
     }

@@ -9,7 +9,7 @@ import Gestion_DatosDinamicos.*;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class OrdenacionBusqueda {
+public class OrdenacionBusqueda extends JFrame{
     private PairListGUI listaDatos;
     private JFrame frame;
     private JTextField input;
@@ -17,6 +17,10 @@ public class OrdenacionBusqueda {
 
     // Constructor
     public OrdenacionBusqueda(PairListGUI listaDatos) {
+        setTitle("Análisis y Organización de Información");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
         this.listaDatos = listaDatos;
         createAndShowGUI();
     }
