@@ -91,4 +91,35 @@ public class Main extends JFrame{
         homeButton.addActionListener(e -> JOptionPane.showMessageDialog(null, "Ya estás en casa"));
         iconPanel.add(homeButton);
 
+        JButton correoButton = new JButton(new ImageIcon(new ImageIcon("src/main/resources/image-icono-correo.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
+        correoButton.setBorderPainted(false);
+        correoButton.setContentAreaFilled(false);
+        correoButton.setFocusPainted(false);
+        correoButton.setOpaque(false);
+        correoButton.addActionListener(e -> JOptionPane.showMessageDialog(null, "nquinbla@myuax.com"));
+        iconPanel.add(correoButton);
+
+        JButton usuarioButton = new JButton(new ImageIcon(new ImageIcon("src/main/resources/image-icono-usuario.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
+        usuarioButton.setBorderPainted(false);
+        usuarioButton.setContentAreaFilled(false);
+        usuarioButton.setFocusPainted(false);
+        usuarioButton.setOpaque(false);
+        usuarioButton.addActionListener(e -> JOptionPane.showMessageDialog(null, "Creado por Nerea Quintanilla Blanco"));
+        iconPanel.add(usuarioButton);
+
+        decoPanel.add(iconPanel, BorderLayout.EAST);
+
+        add(decoPanel, BorderLayout.CENTER);
+
+        setSize(1000, 600);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLocationRelativeTo(null);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new Main();
+    }
+}
+
     }
