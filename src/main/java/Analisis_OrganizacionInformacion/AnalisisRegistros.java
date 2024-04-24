@@ -15,7 +15,7 @@ public class AnalisisRegistros extends JFrame {
     public AnalisisRegistros() {
         setTitle("Análisis y Organización de Información");
         setSize(300, 200);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
 
         this.listaDatos = listaDatos;
@@ -24,7 +24,7 @@ public class AnalisisRegistros extends JFrame {
 
     private void createAndShowGUI() {
         frame = new JFrame("Analisis de Registros");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLayout(new FlowLayout());
 
         JButton sortButton = new JButton("Ordenar Registros");
