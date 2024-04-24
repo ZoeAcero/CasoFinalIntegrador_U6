@@ -52,6 +52,7 @@ public class Main extends JFrame{
             JButton PairListGUIButton = new JButton("Análisis de Registros");
             PairListGUIButton.addActionListener(e1 -> new PairListGUI());
             frame.add(PairListGUIButton);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
             frame.pack();
             frame.setVisible(true);
@@ -68,10 +69,12 @@ public class Main extends JFrame{
             JButton analisisRegistrosButton = new JButton("Análisis de Registros");
             analisisRegistrosButton.addActionListener(e1 -> new AnalisisRegistros());
             frame.add(analisisRegistrosButton);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
             JButton ordenacionBusquedaButton = new JButton("Ordenación y Búsqueda");
             ordenacionBusquedaButton.addActionListener(e1 -> new OrdenacionBusqueda());
             frame.add(ordenacionBusquedaButton);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
             frame.pack();
             frame.setVisible(true);
@@ -88,10 +91,12 @@ public class Main extends JFrame{
             JButton GestionRelacionesButton = new JButton("Gestión de Relaciones");
             GestionRelacionesButton.addActionListener(e1 -> new AnalisisRegistros());
             frame.add(GestionRelacionesButton);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
             JButton RecuperacionEficienteButton = new JButton("Ordenación y Búsqueda");
             RecuperacionEficienteButton.addActionListener(e1 -> new OrdenacionBusqueda());
             frame.add(RecuperacionEficienteButton);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
             frame.pack();
             frame.setVisible(true);
@@ -109,10 +114,12 @@ public class Main extends JFrame{
             JButton IndexacionRecursivaButton = new JButton("Gestión de Relaciones");
             IndexacionRecursivaButton.addActionListener(e1 -> new AnalisisRegistros());
             frame.add(IndexacionRecursivaButton);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
             JButton OrdenacionListadoButton = new JButton("Ordenación y Búsqueda");
             OrdenacionListadoButton.addActionListener(e1 -> new OrdenacionBusqueda());
             frame.add(OrdenacionListadoButton);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
             frame.pack();
             frame.setVisible(true);
