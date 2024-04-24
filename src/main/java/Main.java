@@ -59,7 +59,7 @@ public class Main extends JFrame{
 
         JButton analisisOrganizacionButton = new JButton("Análisis y Organización de Información");
 
-        GestionDatosDinamicosButton.addActionListener(e -> {
+        analisisOrganizacionButton.addActionListener(e -> {
             JFrame frame = new JFrame("Analisis y Organización de Información");
             frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             frame.setLayout(new FlowLayout());
@@ -77,12 +77,23 @@ public class Main extends JFrame{
         });
 
         JButton mapasAsociacionButton = new JButton("Mapas y Asociación de Datos");
-        mapasAsociacionButton.setOpaque(false);
+
         mapasAsociacionButton.addActionListener(e -> {
-            new GestionRelaciones();
-            new RecuperacionEficiente();
+            JFrame frame = new JFrame("Mapas y Asociación de Datos");
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setLayout(new FlowLayout());
+
+            JButton GestionRelacionesButton = new JButton("Gestión de Relaciones");
+            GestionRelacionesButton.addActionListener(e1 -> new AnalisisRegistros());
+            frame.add(GestionRelacionesButton);
+
+            JButton RecuperacionEficienteButton = new JButton("Ordenación y Búsqueda");
+            RecuperacionEficienteButton.addActionListener(e1 -> new OrdenacionBusqueda());
+            frame.add(RecuperacionEficienteButton);
+
+            frame.pack();
+            frame.setVisible(true);
         });
-        buttonPanel.add(mapasAsociacionButton, gbc);
 
 
         JButton indexadorVisualizacionButton = new JButton("Indexador y Visualización de Archivos \uD83D\uDC41\uFE0F\u200B\uD83D\uDDC3\uFE0F\u200B");
