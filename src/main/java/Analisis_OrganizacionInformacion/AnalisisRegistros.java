@@ -6,13 +6,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Gestion_DatosDinamicos.*;
 
-public class AnalisisRegistros {
+public class AnalisisRegistros extends JFrame {
     private PairListGUI listaDatos;
     private JFrame frame;
     private JTextArea textArea;
 
     // Constructor
     public AnalisisRegistros() {
+        setTitle("Análisis y Organización de Información");
+        setSize(300, 200);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+        
         this.listaDatos = listaDatos;
         createAndShowGUI();
     }
