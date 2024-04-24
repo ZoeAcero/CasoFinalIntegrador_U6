@@ -54,7 +54,10 @@ public class Main extends JFrame{
 
         JButton mapasAsociacionButton = new JButton("Mapas y Asociación de Datos");
         mapasAsociacionButton.setOpaque(false);
-        mapasAsociacionButton.addActionListener(e -> new GestionRelaciones());
+        mapasAsociacionButton.addActionListener(e -> {
+            new GestionRelaciones();
+            new RecuperacionEficiente();
+        });
         buttonPanel.add(mapasAsociacionButton, gbc);
 
 
