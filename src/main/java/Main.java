@@ -8,5 +8,5 @@ import Gestion_DatosDinamicos.*;
 import Indexacion_VisualizacionArchivos.*;
 import Mapas_AsociacionDatos.*;
 
-public class Main {
+public class Main extends JFrame{
 }
