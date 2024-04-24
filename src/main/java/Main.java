@@ -42,7 +42,9 @@ public class Main extends JFrame{
         gbc.insets = new Insets(10, 0, 10, 0);
         gbc.ipady = 0;
 
-        Gestion_DatosDinamicosButton.addActionListener(e -> {
+        JButton GestionDatosDinamicosButton = new JButton("Gestión de Datos Dinámicos");
+
+        GestionDatosDinamicosButton.addActionListener(e -> {
             JFrame frame = new JFrame("Gestión de Datos Dinámicos");
             frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             frame.setLayout(new FlowLayout());
