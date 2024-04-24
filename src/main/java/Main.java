@@ -53,10 +53,6 @@ public class Main extends JFrame{
             PairListGUIButton.addActionListener(e1 -> new PairListGUI());
             frame.add(PairListGUIButton);
 
-            JButton ordenacionBusquedaButton = new JButton("Ordenación y Búsqueda");
-            ordenacionBusquedaButton.addActionListener(e1 -> new OrdenacionBusqueda());
-            frame.add(ordenacionBusquedaButton);
-
             frame.pack();
             frame.setVisible(true);
         });
