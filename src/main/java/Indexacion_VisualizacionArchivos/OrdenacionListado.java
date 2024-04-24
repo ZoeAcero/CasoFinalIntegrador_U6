@@ -19,7 +19,7 @@ public class OrdenacionListado extends JFrame {
     public OrdenacionListado() {
         setTitle("Indexacion y Visualizacion de Archivos");
         setSize(300, 200);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
 
         this.archivosIndexados = archivosIndexados;
@@ -28,7 +28,7 @@ public class OrdenacionListado extends JFrame {
 
     private void createAndShowGUI() {
         frame = new JFrame("Ordenacion de Listado");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLayout(new FlowLayout());
 
 
