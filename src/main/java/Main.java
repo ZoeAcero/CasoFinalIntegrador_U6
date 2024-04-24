@@ -74,14 +74,7 @@ public class Main extends JFrame{
         JPanel iconPanel = new JPanel();
         iconPanel.setLayout(new BoxLayout(iconPanel, BoxLayout.Y_AXIS));
         iconPanel.setOpaque(false);
-
-        JButton menuButton = new JButton(new ImageIcon(new ImageIcon("src/main/resources/image-icono-menu.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
-        menuButton.setBorderPainted(false);
-        menuButton.setContentAreaFilled(false);
-        menuButton.setFocusPainted(false);
-        menuButton.setOpaque(false);
-        menuButton.addActionListener(e -> new DescriptionWindow());
-        iconPanel.add(menuButton);
+        
 
         JButton homeButton = new JButton(new ImageIcon(new ImageIcon("src/main/resources/image-icono-home.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
         homeButton.setBorderPainted(false);
@@ -122,4 +115,4 @@ public class Main extends JFrame{
     }
 }
 
-    }
+
