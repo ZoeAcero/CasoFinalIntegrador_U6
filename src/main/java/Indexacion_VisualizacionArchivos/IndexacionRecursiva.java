@@ -22,7 +22,7 @@ public class IndexacionRecursiva {
 
     private void createAndShowGUI() {
         frame = new JFrame("Indexacion Recursiva");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLayout(new FlowLayout());
 
         JButton indexButton = new JButton("Indexar Archivos");
