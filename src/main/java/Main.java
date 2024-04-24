@@ -96,7 +96,7 @@ public class Main extends JFrame{
         correoButton.setContentAreaFilled(false);
         correoButton.setFocusPainted(false);
         correoButton.setOpaque(false);
-        correoButton.addActionListener(e -> JOptionPane.showMessageDialog(null, "nquinbla@myuax.com"));
+        correoButton.addActionListener(e -> JOptionPane.showMessageDialog(null, "zacerrui@myuax.com"));
         iconPanel.add(correoButton);
 
         JButton usuarioButton = new JButton(new ImageIcon(new ImageIcon("src/main/resources/image-icono-usuario.png").getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT)));
@@ -104,7 +104,7 @@ public class Main extends JFrame{
         usuarioButton.setContentAreaFilled(false);
         usuarioButton.setFocusPainted(false);
         usuarioButton.setOpaque(false);
-        usuarioButton.addActionListener(e -> JOptionPane.showMessageDialog(null, "Creado por Nerea Quintanilla Blanco"));
+        usuarioButton.addActionListener(e -> JOptionPane.showMessageDialog(null, "Creado por Zoe Acero Ruiz"));
         iconPanel.add(usuarioButton);
 
         decoPanel.add(iconPanel, BorderLayout.EAST);
