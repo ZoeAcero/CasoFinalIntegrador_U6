@@ -7,6 +7,7 @@ import java.awt.event.ActionListener;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class IndexacionRecursiva {
     private List<File> archivosIndexados;
@@ -74,6 +75,12 @@ public class IndexacionRecursiva {
 
     public static void main(String[] args) {
         IndexacionRecursiva indexacionRecursiva = new IndexacionRecursiva();
+    }
+
+    public void indexar(File directorio) {
+    }
+
+    public Map<Object, Object> getIndex() {
     }
 }
 

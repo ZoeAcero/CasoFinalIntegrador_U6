@@ -1,18 +1,20 @@
 package Indexacion_VisualizacionArchivos;
 
+import Mapas_AsociacionDatos.RecuperacionEficiente;
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
-import java.util.List;  
-import java.util.Map
+import java.util.List;
+import java.util.Map;
 
-public class MainIndexacion {
-    private final IndexadorRecursivo indexadorRecursivo = new IndexadorRecursivo();
-    private final OrdenadorYListador ordenadorYListador = new OrdenadorYListador();
+public class MainIndexacion extends Component {
+    private final IndexacionRecursiva indexadorRecursivo = new IndexacionRecursiva();
+    private final RecuperacionEficiente ordenadorYListador = new RecuperacionEficiente();
 
     public MainIndexacion() {
-        setLayout(new FlowLayout());
-        getContentPane().setBackground(Color.LIGHT_GRAY);
+        ordenadorYListador.setLayout(new FlowLayout());
+        ordenadorYListador.getContentPane().setBackground(Color.LIGHT_GRAY);
 
         ImageIcon imageIcon = new ImageIcon("src/main/resources/image-icono-subida-archivos.png");
         Image image = imageIcon.getImage();
@@ -41,8 +43,8 @@ public class MainIndexacion {
             if (seleccion == JFileChooser.APPROVE_OPTION) {
                 File directorio = fileChooser.getSelectedFile();
                 indexadorRecursivo.indexar(directorio);
-                for (Map.Entry<String, String> entrada : indexadorRecursivo.getIndex().entrySet()) {
-                    ordenadorYListador.agregar(entrada.getKey(), entrada.getValue());
+                for (Map.Entry<Object, Object> entrada : indexadorRecursivo.getIndex().entrySet()) {
+                    ordenadorYListador.agregar((String) entrada.getKey(), (String) entrada.getValue());
                 }
                 JOptionPane.showMessageDialog(this, "Indexación completada");
             }
@@ -65,14 +67,17 @@ public class MainIndexacion {
         add(buttonPanel);
 
         setSize(500, 240);
-        setTitle("Listado de Archivos");
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        setLocationRelativeTo(null);
+        ordenadorYListador.setTitle("Listado de Archivos");
+        ordenadorYListador.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        ordenadorYListador.setLocationRelativeTo(null);
         setVisible(true);
     }
 
+    private void add(JPanel buttonPanel) {
+    }
+
     public static void main(String[] args) {
-        new Main_D();
+        new MainIndexacion();
     }
 
     class CustomButton extends JButton {
@@ -84,4 +89,4 @@ public class MainIndexacion {
         }
     }
 }
-}
+

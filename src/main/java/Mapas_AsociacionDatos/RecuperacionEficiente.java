@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 import java.util.Map;
 import Gestion_DatosDinamicos.*;
 
@@ -15,7 +16,7 @@ public class RecuperacionEficiente extends JFrame{
     private JTextArea textArea;
 
     // Constructor
-    public RecuperacionEficiente(Map<Pair, Pair> relaciones) {
+    public RecuperacionEficiente() {
         setTitle("Mapas y Asociación de Datos");
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -70,5 +71,11 @@ public class RecuperacionEficiente extends JFrame{
 
     public void eliminarRelacion(Pair pareja) {
         this.relaciones.remove(pareja);
+    }
+
+    public void agregar(String key, String value) {
+    }
+
+    public List<String> listar() {
     }
 }
