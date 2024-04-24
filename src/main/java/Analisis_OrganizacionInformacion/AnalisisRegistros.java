@@ -12,7 +12,7 @@ public class AnalisisRegistros {
     private JTextArea textArea;
 
     // Constructor
-    public AnalisisRegistros(PairListGUI listaDatos) {
+    public AnalisisRegistros() {
         this.listaDatos = listaDatos;
         createAndShowGUI();
     }
