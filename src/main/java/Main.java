@@ -42,10 +42,22 @@ public class Main extends JFrame{
         gbc.insets = new Insets(10, 0, 10, 0);
         gbc.ipady = 0;
 
-        JButton gestionDatosDinamicosButton = new JButton("Gestión de Datos Dinámicos");
-        gestionDatosDinamicosButton.setOpaque(false);
-        gestionDatosDinamicosButton.addActionListener(e -> new PairListGUI());
-        buttonPanel.add(gestionDatosDinamicosButton, gbc);
+        Gestion_DatosDinamicosButton.addActionListener(e -> {
+            JFrame frame = new JFrame("Gestión de Datos Dinámicos");
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+            frame.setLayout(new FlowLayout());
+
+            JButton analisisRegistrosButton = new JButton("Análisis de Registros");
+            analisisRegistrosButton.addActionListener(e1 -> new AnalisisRegistros());
+            frame.add(analisisRegistrosButton);
+
+            JButton ordenacionBusquedaButton = new JButton("Ordenación y Búsqueda");
+            ordenacionBusquedaButton.addActionListener(e1 -> new OrdenacionBusqueda());
+            frame.add(ordenacionBusquedaButton);
+
+            frame.pack();
+            frame.setVisible(true);
+        });
 
         JButton analisisOrganizacionButton = new JButton("Análisis y Organización de Información");
         analisisOrganizacionButton.setOpaque(false);
