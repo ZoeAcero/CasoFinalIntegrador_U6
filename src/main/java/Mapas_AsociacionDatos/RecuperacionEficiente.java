@@ -19,7 +19,7 @@ public class RecuperacionEficiente extends JFrame{
     public RecuperacionEficiente() {
         setTitle("Mapas y Asociación de Datos");
         setSize(300, 200);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setVisible(true);
         this.relaciones = relaciones;
         createAndShowGUI();
@@ -27,7 +27,7 @@ public class RecuperacionEficiente extends JFrame{
 
     private void createAndShowGUI() {
         frame = new JFrame("Recuperacion Eficiente");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.setLayout(new FlowLayout());
 
         input1 = new JTextField(10);
